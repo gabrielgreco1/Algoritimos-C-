@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() { 
+  int L, C;
+  int matriz[4][4];
+  int mairo = -9999;
+  int onde_linha;
+  int onde_coluna;
+  int A;
+  printf("Informe os 16 valores para carregar a matriz\n");
+  for (L=0;L<4;L++){
+    for (C=0;C<4;C++){
+      printf("Informe o valor do elemento %3d / %3d \n ",L,C);
+      scanf("%d",&matriz[L][C]) ;
+    };
+  };
+  printf("\nExibindo a matriz informada \n"); 
+  printf( "l\\c .0.. .1.. .2.. .3.. \n");
+  for (L=0;L<4;L++){
+    printf("%1d ", L);
+    for (C=0;C<4;C++){
+      printf("%5d", matriz[L][C]);
+      if (matriz[L][C]> mairo) {
+        mairo = matriz[L][C];
+        onde_linha = L;
+        onde_coluna = C;
+      };
+    };
+    printf("\n");
+  };
+  printf("Encontrado o valor %d  na linha %d  e coluna
+%d",mairo,onde_linha,onde_coluna);
+  
+  }
