@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+   int SFX, VE, ST, L;
+   
+   printf("Insira o Salário Fixo: ");
+   scanf("%d", &SFX);
+   
+   printf("Insira o valor das vendas efetuadas pelo vendedor: ");
+   scanf("%d", &VE);
+   
+   L= VE - 1500;
+   
+   if (VE < 1500){
+     ST = (VE* 0.03) + SFX;
+     printf("O salário total é de %d", VE);}{
+    else 
+     L = (L * 0.05);
+     ST = VE + L;
+     printf("O salário total é de %d", ST); 
+     }
+     
+}
+      
