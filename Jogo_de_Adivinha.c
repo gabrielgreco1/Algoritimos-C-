@@ -1,3 +1,4 @@
+/////////// Gabriel de Araujo Greco //////////
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -23,7 +24,6 @@ int main() {
     
     int numerosecreto = rand() % 100;
 
-    
     int chute;
     
     int tentativas = 1;
@@ -36,13 +36,23 @@ int main() {
 
     int numerodetentativas = 5;
     
+    int x;
     
     // escolhendo o nivel de dificuldade
     printf("Qual o nivel de dificuldade?\n");
-    printf(" (1) Facil - 20 tentativas \n (2) Medio - 15 tentativas \n (3) Dificil - 10 tentativas\n (4) Muito dificil - 5 tentativas\n");
-    printf("Escolha: ");
-
+    printf(" (1) Facil - 20 tentativas \n (2) Medio - 15 tentativas \n (3) Dificil - 10 tentativas");
+    printf("\n (4) Muito dificil - 5 tentativas");
+    printf("\n (5) Jogo personalizado");
+    
+    
+    printf("\n\nEscolha: ");
     scanf("%d", &nivel);
+    
+    if (nivel == 5) {
+            
+            printf("\nInsira a quantidade de tentativas desejadas: ");    
+            scanf("%d", &x);
+        }
 
     switch(nivel) {
         case 1: 
@@ -54,15 +64,14 @@ int main() {
         case 3:
             numerodetentativas = 10;
             break;
-        default:
+        case 4:
             numerodetentativas = 5;
+            break;
+        default:
+            numerodetentativas = x; 
             break;
     }
 
-   
-   
-   
-   
    
     for(int i =  1; i <= numerodetentativas; i++){
     
@@ -108,12 +117,12 @@ int main() {
        
       if(acertou) {
           printf("\n\nVocê ganhou! ");
-          printf("\n _____ ");
-          printf("\n|^   ^|   ");
-          printf("\n|O   O|   ");
-          printf("\n|  ~ *!   ");
-          printf("\n   O     ");
-          printf("\n  | |);   ");
+          printf("\n  _____ ");
+          printf("\n |^   ^|   ");
+          printf("\n |O   O|   ");
+          printf("\n |  ~ *!   ");
+          printf("\n    O     ");
+          printf("\n   | |);   ");
                printf("\nTotal de pontos: %.2f", pontos);
                
       }
