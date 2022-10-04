@@ -39,7 +39,7 @@ int main() {
     
     // escolhendo o nivel de dificuldade
     printf("Qual o nivel de dificuldade?\n");
-    printf("(1) Facil (2) Medio (3) Dificil\n\n");
+    printf(" (1) Facil - 20 tentativas \n (2) Medio - 15 tentativas \n (3) Dificil - 10 tentativas\n (4) Muito dificil - 5 tentativas\n");
     printf("Escolha: ");
 
     scanf("%d", &nivel);
@@ -51,8 +51,11 @@ int main() {
         case 2:
             numerodetentativas = 15;
             break;
+        case 3:
+            numerodetentativas = 10;
+            break;
         default:
-            numerodetentativas = 6;
+            numerodetentativas = 5;
             break;
     }
 
@@ -101,14 +104,30 @@ int main() {
        
     }
        printf ("\nFim de Jogo");
+       printf ("\nO numero secreto é %d", numerosecreto);
        
       if(acertou) {
-          printf("\nVocê ganhou!");
+          printf("\n\nVocê ganhou! ");
+          printf("\n _____ ");
+          printf("\n|^   ^|   ");
+          printf("\n|O   O|   ");
+          printf("\n|  ~ *!   ");
+          printf("\n   O     ");
+          printf("\n  | |);   ");
                printf("\nTotal de pontos: %.2f", pontos);
                
       }
       else {
-            printf("\nVocê perdeu! Tente novamente!");
+            
+    printf("\n   Você perdeu!       ");
+    printf("\n     _______       ");
+    printf("\n    |.-----.|      ");
+    printf("\n    ||x . x||      ");
+    printf("\n    ||_.-._||      ");
+    printf("\n    `--)-(--`      ");
+    printf("\n   __[=== o]___    ");
+    printf("\n  |:::::::::::|\   ");
+    printf("\n  `-=========-`    ");
             
 
  
